@@ -14,20 +14,6 @@ skill/     可移植协作技能包
 report/    设计、复现边界、证据和协作记录
 ```
 
-## 本地最小复现（不需要板卡）
-
-Python 3.10+，安装 NumPy、SciPy、Pillow；Linux 或 Windows 配置 g++ 可追加 C++ 内核测试。
-
-```bash
-python -m pip install -r requirements.txt
-python data/generate_synthetic.py
-python sim/run_checks.py
-```
-
-查看 `sim/results/latest.json` 和 `sim/results/synthetic_report/report.html`。这些数据由程序生成，不含患者影像；测试仅验证功能，不能表述为分割精度或硬件性能。
-
-交付完整性检查：`python build/verify_manifest.py`。重新运行测试会改变结果文件，此时需重新运行 `python build/package_repository.py` 更新清单和ZIP。交付操作与范围见 [复现说明](report/reproduction.md)。
-
 ## 训练与量化
 
 Kaggle archive 入口：`src/training/covid19_lesion_kaggle_kv260_archive.ipynb`。较新的 deep_cap 训练/导出材料位于 `src/training/structure_optimization`（以该目录文件为准）。两种模型的结构、预处理和阈值协议不同，不可互换权重或编译产物。模型、数据和平台依赖见 [data/README.md](data/README.md)。
