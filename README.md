@@ -53,6 +53,6 @@ bash board/scripts/run_ps.sh --image /path/CT.png \
 
 有历史 DPU 推理、18组后处理HLS板端对照及2份保存整机任务审计材料；本次交付只重新运行本地功能测试。完整 routed 资源/时序/CDC/DRC 报告、三内核肺区HLS联合固件验收、公平ARM/HLS对照尚未全部取得。不得把历史摘要或pragma目标当作当前源码的综合实现结论。
 
-默认配置不预设三级阈值；30%/60%文件为已有用户研究规则，不是临床标准。分级只描述单切片估计面积受累。详见 [设计报告](report/design.md)、[证据状态](report/evidence_status.md) 和 [大模型协作记录](report/llm_collaboration.md)。
+分级只描述单切片估计面积受累。详见 [设计报告](report/design.md)、[证据状态](report/evidence_status.md) 和 [大模型协作记录](report/llm_collaboration.md)。
 
 厂商 DPU、平台与工具依适用许可取得；本交付不重新分发厂商IP，也未代项目所有者指定开源许可证。
