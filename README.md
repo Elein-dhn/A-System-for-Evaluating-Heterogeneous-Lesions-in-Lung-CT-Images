@@ -55,4 +55,4 @@ bash board/scripts/run_ps.sh --image /path/CT.png \
 
 分级只描述单切片估计面积受累。详见 [设计报告](report/design.md)、[证据状态](report/evidence_status.md) 和 [大模型协作记录](report/llm_collaboration.md)。
 
-厂商 DPU、平台与工具依适用许可取得；本交付不重新分发厂商IP，也未代项目所有者指定开源许可证。
+厂商 DPU、平台与工具依适用许可取得。
