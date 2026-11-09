@@ -52,7 +52,7 @@ Kaggle archive 入口：`src/training/covid19_lesion_kaggle_kv260_archive.ipynb`
 
 ## Vitis 构建
 
-开发主机使用 Vivado/Vitis/Vitis HLS 2022.1；模型工具链使用 Vitis AI 2.5。板端历史基线为 Ubuntu 22.04、VART 2.5、XRT 2.13、B3136，指纹 `0x101000016010406`。
+开发主机使用 Vivado/Vitis/Vitis HLS 2022.1；模型工具链使用 Vitis AI 2.5。
 
 ```bash
 cp build/vitis_20221/config.example.json build/vitis_20221/config.json
