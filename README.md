@@ -69,7 +69,7 @@ python build/vitis_20221/build.py link --config build/vitis_20221/config.json
 
 ## 板端运行
 
-先在宿主正确加载匹配固件，再进入具有 VART/XIR/XRT 的板端容器。脚本不自动卸载、重载固件。
+正确加载匹配固件，再进入具有 VART/XIR/XRT 的板端容器。
 
 ```bash
 bash board/scripts/run_ps.sh --image /path/CT.png \
@@ -77,12 +77,4 @@ bash board/scripts/run_ps.sh --image /path/CT.png \
   --output /path/new_result
 ```
 
-默认后处理为 NumPy；使用联合固件时显式增加 `--backend xrt-native --xclbin /path/metadata.xclbin --firmware-uuid ACTUAL_UUID`。读取 [board/README.md](board/README.md)，不要将 SmartCam 原固件当成包含自定义HLS的固件。模型需符合 deep_cap 的编译图检查；旧archive模型可用 `run_dpu_slice.py` 独立入口。
-
-## 实现状态
-
-有历史 DPU 推理、18组后处理HLS板端对照及2份保存整机任务审计材料；本次交付只重新运行本地功能测试。完整 routed 资源/时序/CDC/DRC 报告、三内核肺区HLS联合固件验收、公平ARM/HLS对照尚未全部取得。
-
-分级只描述单切片估计面积受累。详见 [设计报告](report/design.md)、[证据状态](report/evidence_status.md) 和 [大模型协作记录](report/llm_collaboration.md)。
-
-厂商 DPU、平台与工具依适用许可取得。
+使用联合固件时显式增加 `--backend xrt-native --xclbin /path/metadata.xclbin --firmware-uuid ACTUAL_UUID`。读取 [board/README.md](board/README.md)，不要将 SmartCam 原固件当成包含自定义HLS的固件。模型需符合 deep_cap 的编译图检查；旧archive模型可用 `run_dpu_slice.py` 独立入口。
