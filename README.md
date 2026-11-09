@@ -5,7 +5,7 @@
 ## 目录
 
 ```text
-kv260-lung-ct.rar
+A-System-for-Evaluating-Heterogeneous-Lesions-in-Lung-CT-Images/kv260-lung-ct.rar
 src/       HLS、PS 与训练源码
 sim/       原生功能测试、合成闭环及本次结果
 build/     Vitis 2022.1 分阶段构建、实现报告采集
