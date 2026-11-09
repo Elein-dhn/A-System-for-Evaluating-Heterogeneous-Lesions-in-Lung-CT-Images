@@ -23,7 +23,7 @@ Kaggle archive 入口：`src/training/covid19_lesion_kaggle_kv260_archive.ipynb`
 
 ## Vitis 构建
 
-开发主机使用 Vivado/Vitis/Vitis HLS 2022.1；模型工具链使用 Vitis AI 2.5。板端历史基线为 Ubuntu 22.04、VART 2.5、XRT 2.13、B3136，指纹 `0x101000016010406`。这不是自动检测到的当前板卡状态。
+开发主机使用 Vivado/Vitis/Vitis HLS 2022.1；模型工具链使用 Vitis AI 2.5。板端历史基线为 Ubuntu 22.04、VART 2.5、XRT 2.13、B3136，指纹 `0x101000016010406`。
 
 ```bash
 cp build/vitis_20221/config.example.json build/vitis_20221/config.json
@@ -36,7 +36,7 @@ python build/vitis_20221/build.py export --config build/vitis_20221/config.json
 python build/vitis_20221/build.py link --config build/vitis_20221/config.json
 ```
 
-在实际工具链主机执行，各步骤失败即停止。源码或配置改变时使用新的 `--build` 目录。HLS源码的低资源分支、时序和资源要求见 [构建说明](build/README.md)。无原始平台/DPU IP时只能复现软件与C++功能，不能从本仓库独立生成最终固件。
+在实际工具链主机执行，各步骤失败即停止。源码或配置改变时使用新的 `--build` 目录。HLS源码的低资源分支、时序和资源要求见 [构建说明](build/README.md)。
 
 ## 板端运行
 
@@ -52,7 +52,7 @@ bash board/scripts/run_ps.sh --image /path/CT.png \
 
 ## 实现状态
 
-有历史 DPU 推理、18组后处理HLS板端对照及2份保存整机任务审计材料；本次交付只重新运行本地功能测试。完整 routed 资源/时序/CDC/DRC 报告、三内核肺区HLS联合固件验收、公平ARM/HLS对照尚未全部取得。不得把历史摘要或pragma目标当作当前源码的综合实现结论。
+有历史 DPU 推理、18组后处理HLS板端对照及2份保存整机任务审计材料；本次交付只重新运行本地功能测试。完整 routed 资源/时序/CDC/DRC 报告、三内核肺区HLS联合固件验收、公平ARM/HLS对照尚未全部取得。
 
 分级只描述单切片估计面积受累。详见 [设计报告](report/design.md)、[证据状态](report/evidence_status.md) 和 [大模型协作记录](report/llm_collaboration.md)。
 
